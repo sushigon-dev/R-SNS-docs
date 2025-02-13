@@ -31,7 +31,6 @@
     "id": "0effc6e3-f4b4-4a1b-a003-d99322a892e3"
     "createdAt": "2025021311001102",
     "updatedAt": "2025021311001102",
-    "continuationDays": "1"
   }
   ```
 
