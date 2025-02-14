@@ -20,14 +20,14 @@
   レスポンス例（json じゃなくてもいい）（適当な例）
   ```json
   {
-    "id": "0effc6e3-f4b4-4a1b-a003-d99322a892e3"
+    "id": "0effc6e3-f4b4-4a1b-a003-d99322a892e3",
     "createdAt": "2025021311001102",
     "updatedAt": "2025021311001102",
     "title": "1日1回バックエンド",
     "tags": "バックエンド",
     "body": "バックエンドおもろい",
     "user": {
-	    "id": "d5b9e5db-977e-40bd-a027-376b13c93712"
+	    "id": "d5b9e5db-977e-40bd-a027-376b13c93712",
 	    "name": "与謝野晶子"
     }
   }
@@ -37,15 +37,7 @@
 
 - HTTP/1.1 400 Bad Request
   - リクエストが間違っている
-  - 例: エンドポイント間違い
-  ```bash
-  curl -X GET\
-    http://localhost:8080/api/
-  ```
-
-- HTTP/1.1 500 Internal Server Error
-  - データの取得中の予期しないエラー
-  - 例:渡す情報が少ない
+  - 例: 渡される情報が多い
   ```bash
   curl -X POST \
     -H "Content-Type: application/json"\
@@ -54,7 +46,10 @@
 	    "user": {
 	      "id": "011b1d47-6e1e-4392-988b-a7af97a7f4c8",
 	      "name": "与謝野晶子"
-	    }
-    }
+	    }\
+    http://localhost:8080/api/routine  
 	}' 
   ```
+  
+- HTTP/1.1 500 Internal Server Error
+  - データ取得中の予期しないエラー
