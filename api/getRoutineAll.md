@@ -36,10 +36,17 @@
 
 - HTTP/1.1 400 Bad Request
   - リクエストが間違っている
+<<<<<<< HEAD
   - 例: エンドポイント間違い
   ```bash
   curl -X GET\
     http://localhost:8080/api/
+=======
+  - 例: メソッドがない
+  ```bash
+  curl \
+    http://localhost:8080/api/routine
+>>>>>>> 0fe2e41c380f01e47ddf7c5e160ea20066cf0ac8
   
   ```
 
